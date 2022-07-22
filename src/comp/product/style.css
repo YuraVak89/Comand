@@ -1,0 +1,83 @@
+.top-main{
+   display: flex;
+}
+
+.sidebar{
+   width: 250px;
+   padding: 10px;
+   box-shadow: 0px 0px 2px 5px black;
+}
+
+.prod-card{
+   width: 280px;
+   height: 200px;
+   border-radius: 15px;
+   margin-left: 15px;
+   margin-bottom: 15px;
+   background-color: silver;
+   box-shadow: 0px 0px 2px 5px black;
+}
+
+.prod-card:hover{
+   cursor: pointer;
+   box-shadow: none;
+}
+
+.wrapper-prod{
+   width: 900px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.prod-image{
+   width: 250px;
+   margin: 0 auto;
+   margin-top: 15px;
+   height: 100px;
+   border-radius: 10px;
+   text-align: center;
+}
+
+.prod-info{
+   display: flex;
+   text-align: center;
+   justify-content: space-around;
+   padding: 15px;
+}
+
+.prod-butt{
+   width: 70px;
+   height: 30px;
+   background-color: silver;
+   box-shadow: 0px 0px 2px 3px black;
+   border-radius: 7px;
+   border: none;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 18px;
+}
+
+.prod-butt:hover{
+   box-shadow: 0px 0px 2px 5px white;
+   cursor: pointer;
+}
+
+.image{
+   width: 250px;
+   height: 100px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 2px 3px black;
+}
+
+.wrap-eat{
+   display: flex;
+   width: 900px;
+   flex-wrap: wrap;
+   min-width: 300px;
+}
+
+.card-name{
+   text-align: center;
+   justify-content: center;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 5px;
+}
