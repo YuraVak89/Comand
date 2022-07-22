@@ -5,17 +5,14 @@ import './style.css'
 const History = () => {
   const[email, setEmail] = useState('')
   const[error, setError] = useState(false);
-  const[reset, setReset] = useState(false)
 
   const allShoppers = async () => {
     
     const res = await axios.get("http://localhost:5000/api/prod/allshoppers")
     if(res){
       localStorage.setItem("history", JSON.stringify(res.data))
-      setReset(true)
-      return false
+      document.location.reload()
     }
-    document.location.reload()
   }
 
   const formSubmit = async () => {
@@ -29,8 +26,6 @@ const History = () => {
    if(res){
      setEmail('')
      localStorage.setItem("history", JSON.stringify(res.data))
-     setReset(true)
-     return false
    }
   }
 
@@ -46,7 +41,7 @@ const History = () => {
       <h2>History Shopper</h2>
       <div className="form-for-history">
         <div>
-              {reset ? <button className="btn-clear" onClick={clear}>clear</button> : null}
+              {shpopper && <button className="btn-clear" onClick={clear}>clear</button>} 
           </div> 
         <form onSubmit={e => e.preventDefault()}>
           {error && !email && (
